@@ -125,22 +125,22 @@ export default class BaseGacha {
     this.beforeRollOnce()
     let rating;
     this.shuffle(this.probabilityRange)
-    this.attempts = 1
-    const guaranteed5Star = !(this.pityCounter5 % this.hardPity5Limit)
-    if (guaranteed5Star) {
-      return this.getGuaranteed5StarItem()
-    }
-    const guaranteed4Star = (this.pityCounter4 === 10)
-    if (guaranteed4Star) {
-      return this.getGuaranteed4StarItemOrHigher()
-    }
-    rating = this.getRandomRating()
-    if (rating === 3) {
-      return this.getRandom3StarItem()
-    } else if (rating === 4) {
-      this.pityCounter4 = 0
-      return this.getRandom4StarItem()
-    }
+    // this.attempts = 1
+    // const guaranteed5Star = !(this.pityCounter5 % this.hardPity5Limit)
+    // if (guaranteed5Star) {
+    //   return this.getGuaranteed5StarItem()
+    // }
+    // const guaranteed4Star = (this.pityCounter4 === 10)
+    // if (guaranteed4Star) {
+    //   return this.getGuaranteed4StarItemOrHigher()
+    // }
+    // rating = this.getRandomRating()
+    // if (rating === 3) {
+    //   return this.getRandom3StarItem()
+    // } else if (rating === 4) {
+    //   this.pityCounter4 = 0
+    //   return this.getRandom4StarItem()
+    // }
     return this.getGuaranteed5StarItem()
   }
   shuffle(array) {

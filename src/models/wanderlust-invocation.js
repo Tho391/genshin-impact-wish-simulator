@@ -7,24 +7,24 @@ export default class WanderlustInvocation extends BaseGacha {
   }
   rollOnce() {
     let rating;
-    this.shuffle(this.probabilityRange)
-    this.attempts = 1
-    const guaranteed5Star = !(this.pityCounter5 % this.hardPity5Limit)
-    if (guaranteed5Star) {
-      return this.getRandomItem(5)
-    }
-    const guaranteed4Star = (this.pityCounter4 === 10)
-    if (guaranteed4Star) {
-      return this.getGuaranteed4StarItemOrHigher()
-    }
-    rating = this.getRandomRating()
-    if (rating === 3) {
-      return this.getRandomItem(3)
-    }
-    if (rating === 4) {
-      this.pityCounter4 = 0
-      return this.getRandomItem(4)
-    }
+    // this.shuffle(this.probabilityRange)
+    // this.attempts = 1
+    // const guaranteed5Star = !(this.pityCounter5 % this.hardPity5Limit)
+    // if (guaranteed5Star) {
+    //   return this.getRandomItem(5)
+    // }
+    // const guaranteed4Star = (this.pityCounter4 === 10)
+    // if (guaranteed4Star) {
+    //   return this.getGuaranteed4StarItemOrHigher()
+    // }
+    // rating = this.getRandomRating()
+    // if (rating === 3) {
+    //   return this.getRandomItem(3)
+    // }
+    // if (rating === 4) {
+    //   this.pityCounter4 = 0
+    //   return this.getRandomItem(4)
+    // }
     return this.getRandomItem(5)
   }
   getRandomItem(rating) {
